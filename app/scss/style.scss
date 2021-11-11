@@ -1,0 +1,27 @@
+@import "mixins";
+@import "config";
+
+@import "loginmenu";
+@import "header";
+@import "features";
+@import "products";
+@import "footer";
+
+body{
+    background: $white;
+    font-family: 'Public Sans', sans-serif;
+    font-size: 1.12rem;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    line-height: 1.3;
+    color: $darkPrimaryColor;
+    &.no-scroll{
+        overflow: hidden;
+    }
+} 
+
+#content{
+    margin-top: 6.7rem;
+
+}

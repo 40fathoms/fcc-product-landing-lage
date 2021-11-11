@@ -1,0 +1,36 @@
+
+//Colors
+$primaryColor: #0a1896;
+$secondaryColor: #74a4fd;
+$white: #ffffff;
+$darkPrimaryColor: darken($primaryColor, 20%);
+$lightenedSecondaryColor: lighten($secondaryColor,20%);
+
+*, *::before, *::after{
+    box-sizing: inherit;
+}
+
+//flexbox
+
+.flex{
+
+    display: flex;
+
+    &-jc-sb{
+        justify-content: space-between;
+    }
+
+    &-jc-c{
+        justify-content: center;
+    }
+
+    &-ai-c{
+        align-items: center;
+    }
+}
+
+//links
+a, a:visited, a:hover{
+    text-decoration: none;
+    color: $darkPrimaryColor;
+}

@@ -1,0 +1,291 @@
+#page-mask{
+    &.active{
+        background: rgba(0, 0, 0, 0.5);
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+    }  
+}
+
+.login{
+    z-index: 2;
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%); 
+    
+    background: $darkPrimaryColor;
+    color: set-text-color($darkPrimaryColor);
+    border-radius: 1rem;
+    
+    #form{
+        position: relative;
+        padding: 3.125rem;
+        padding-bottom: 1.04rem;
+        font-size: 1.39rem;
+
+        input{
+            
+            margin-bottom: 3.125rem;
+            padding: 0.5215rem;
+            font-size: 1.39rem;
+            width: 21.019rem;
+        }
+        
+        input[type=submit]{
+            position: relative;
+            left: 50%;
+            transform: translate(-50%,0);
+
+            //border-radius: 2rem;
+        }
+    }
+
+    &.active{
+        display: block;
+    }
+
+    .fa-times{
+        position: absolute;
+        right: 1rem;
+        top: 0.5rem;
+        z-index: 1;
+        
+        &:hover{
+            cursor: pointer;
+            color: $secondaryColor;
+        }
+    }
+
+    .sign-up-page{
+        font-size: 1.49rem;
+        position: relative;
+        margin-top: 1.5rem;
+
+        &:hover{
+            cursor: pointer;
+            color: $secondaryColor;
+        }
+    }
+}
+
+.sign-up{
+    z-index: 2;
+    display: none;
+    position: fixed;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%); 
+   
+    background: $darkPrimaryColor;
+    color: set-text-color($darkPrimaryColor);
+    font-size: 1.39rem;
+    border-radius: 1rem;
+    
+    #form-sign-up{
+        
+        padding: 3.125rem;
+        padding-bottom: 1.04rem;
+
+        input{
+            font-size: 1.39rem;
+            margin-bottom: 3.125rem;
+            padding: 0.5215rem;
+
+            width: 21.019rem;
+        }
+
+        input[type=submit]{
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%,0);
+        }
+    }
+
+    &.active{
+        display: block;
+    }
+
+    .fa-times{
+        position: absolute;
+        right: 1rem;
+        top: 0.5rem;
+        z-index: 1;
+        &:hover{
+            cursor: pointer;
+            color: $secondaryColor;
+        }
+    }
+
+    .fa-arrow-left{
+        position: absolute;
+        left: 1rem;
+        top: 0.5rem;
+        z-index: 1;
+        &:hover{
+            cursor: pointer;
+            color: $secondaryColor;
+        }
+    }
+
+    #warning-message{
+        font-size: 1.49rem;
+        margin-top: 1.5rem;
+        color: $secondaryColor;
+        position: relative;
+        display: inline-block;
+        left: 50%;
+        transform: translate(-50%,0);  
+    }
+}
+
+@include breakpoint-down(small){
+    
+}
+
+
+
+
+
+@media screen and (max-width:1024px){
+
+
+    
+    
+    .login{
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        border-radius: 0 !important;
+        
+
+        #form{
+            position: fixed; 
+            width: 22.4375rem;
+            padding: 3rem;
+            padding-bottom: 1.04rem;
+            font-size: 1.39rem;
+            left: 50%;
+            transform: translate(-50%,0);
+
+            label{
+                position: relative;
+                left: 0;
+            }
+            #email-login, #password-login{
+                left: 50%;
+                transform: translate(-50%,0);
+            }    
+            input{
+                position: relative;
+                margin-bottom: 3.125rem !important;
+                padding: 0.5215rem;
+            }
+        }
+
+        .sign-up-page{
+            font-size: 1.1rem !important;
+            position: relative;
+            margin-top: 1.5rem;
+        }
+    }    
+
+
+    .sign-up{
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        border-radius: 0 !important;
+        
+
+        #form-sign-up{
+            position: fixed; 
+            width: 22.4375rem;
+            padding: 3rem;
+            padding-bottom: 1.04rem;
+            font-size: 1.39rem;
+            left: 50%;
+            transform: translate(-50%,0);
+
+            label{
+                position: relative;
+                left: 0;
+            }
+            #email-sign-up, #email-sign-up-repeat, #password-sign-up{
+                left: 50%;
+                transform: translate(-50%,0);
+            }    
+            input{
+                position: relative;
+                margin-bottom: 3.125rem !important;
+                padding: 0.5215rem;
+            }
+        }
+
+        #warning-message{
+            font-size: 1.1rem !important;
+            position: relative;
+            margin-top: 1.5rem;
+        }
+    }    
+}
+
+@media screen and (max-width:400px){
+    .login{
+        #form{
+            width: 90%;
+            
+            label{
+                font-size: 1rem;
+            }
+            #email-login, #password-login{
+                width: 80%;
+                font-size: 0.9rem;
+                padding: 0.4rem;
+                margin-bottom: 1rem !important;
+            }    
+            input[type=submit]{
+                width: auto;
+                font-size: 0.9rem;
+                margin-top: 1rem !important;
+            }
+
+            .sign-up-page{
+                font-size: 0.8rem !important;
+                width: 10rem;
+            }
+        }
+    }
+
+    .sign-up{
+        #form-sign-up{
+            width: 90%;
+            
+            label{
+                font-size: 1rem;
+            }
+            #email-sign-up, #email-sign-up-repeat, #password-sign-up{
+                width: 80%;
+                font-size: 0.9rem;
+                padding: 0.4rem;
+                margin-bottom: 1rem !important;
+            }    
+            input[type=submit]{
+                
+                width: auto;
+                font-size: 0.9rem;
+                margin-top: 1rem !important;
+            }
+
+            #warning-message{
+                font-size: 0.8rem !important;
+                width: 10rem;
+            }
+        }
+    }
+} 

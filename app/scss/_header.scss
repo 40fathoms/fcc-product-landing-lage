@@ -1,0 +1,131 @@
+.header{
+
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-color: $white !important;
+    z-index: 1;
+ 
+    nav{
+        padding: 0 0.5rem;
+
+        .home{
+            #header-img{
+                width: 12rem;
+                height: 6rem;
+
+                @include breakpoint-down(small){
+                    width: 10rem;
+                    height: 5rem;
+                }
+            }
+        }
+
+        .header_menu{
+            > span{
+                display: block;
+                width: 26px;
+                height: 2px;
+                background-color:set-text-color($white);
+
+                &:not(:last-child){
+                    margin-bottom: 3px;
+                }
+            }
+        }
+
+        .header_links{
+            a{
+                font-size: 0.875rem;
+                color: set-text-color($white);
+                transition: color 200ms ease-in-out;
+                padding-bottom: 0.7rem;
+                font-weight: 700;
+
+                &:hover{
+                    color: $primaryColor;
+                    border-bottom: 3px solid $secondaryColor;
+                }
+                &:not(:last-child){
+                    margin-right: 32px;
+                }
+            }
+        }
+
+        .button_login{
+            padding: 0.575rem 2.1875rem;
+            border-radius: 50px;
+            cursor: pointer;
+            background:
+                linear-gradient(to right, $secondaryColor, $primaryColor);
+            border: 0;
+            font-weight: 700;
+            color: $white;
+            font-size: 0.87rem;
+            transition: opacity 300ms ease-in-out;
+
+            &:hover{
+                opacity: 0.75;
+            }
+        }
+    }
+}
+
+.hide-for-mobile{
+    @include breakpoint-down(medium){
+        display: none;
+    }
+}
+
+.hide-for-desktop{
+    @include breakpoint-up(large){
+        display: none;
+    }
+}
+
+
+#page-mask-menu{
+    &.open{
+        background: rgba(0, 0, 0, 0.5);
+        position: fixed;
+        top: 6.6875rem;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }  
+}
+
+.header_links_toggle{
+
+    visibility: hidden;
+    position: absolute;
+    top: 6.6875rem;
+    background: $lightenedSecondaryColor;
+
+    width: calc(100% - 6rem); //https://stackoverflow.com/questions/60298331/how-to-overcome-css-calc-function-invalid-property-value-but-when-typed-in-in
+    left: 50%;
+    transform: translate(-50%);
+
+    margin-top: 2rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+
+    a{
+        display: block;
+        text-align:center;
+        padding: 0.8rem;
+        color: set-text-color($lightenedSecondaryColor);
+
+        &:last-child{
+            border-top: 0.1rem solid $primaryColor;
+        }
+        &:hover{
+            cursor: pointer;
+            color: $secondaryColor;
+        }
+    }
+
+    &.open{
+        visibility: visible;
+    }
+}

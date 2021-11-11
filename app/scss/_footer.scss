@@ -1,0 +1,66 @@
+.footer{
+
+    background-color: $darkPrimaryColor;
+    color: $white;
+    text-align: center;
+    padding: 3rem 2rem;
+
+    @include breakpoint-up(large){
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        grid-template-areas: 
+        "social links"
+        "social copyright";
+        justify-items: end;
+        
+    }
+
+    a{
+        text-decoration: none;
+        color: $white; 
+        transition: all 200ms ease-in-out;
+
+        &:hover{
+            color: $secondaryColor;
+        }
+
+        &:not(:last-child){
+            margin-right: 2rem;
+        }
+    }
+
+    &_social{
+        margin-bottom: 1.5rem;
+
+        @include breakpoint-up(large){
+            grid-area: social;
+            justify-self: center;
+        }
+    }
+
+    &_links{
+        margin-bottom: 1.5rem;
+
+        @include breakpoint-down(small){
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 1rem;
+
+            a{
+                margin-right: 0 !important;
+            }
+        }
+
+        @include breakpoint-up(large){
+            grid-area: links;
+        }
+    }
+
+    &_copyright{
+
+        @include breakpoint-up(large){
+            grid-area: copyright;
+        }
+    }
+}

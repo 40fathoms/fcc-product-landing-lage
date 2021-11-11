@@ -1,0 +1,68 @@
+.products{
+
+    
+    padding: 3rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    
+
+    @include breakpoint-down(medium){
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include breakpoint-down(small){
+        grid-template-columns: 1fr;
+        padding: 0.5rem;
+    }
+
+    &_item{
+        
+        text-align: center;
+        transition: all 200ms ease-in-out;
+
+        &:hover{
+            transform: scale(1.01);
+            border: solid 0.1rem $primaryColor;
+        }
+    }
+
+    &_image{
+        height: 15rem;
+        background-size: cover;
+        background-position: 50% center;
+        &:hover{
+            cursor: pointer;
+        }
+    }
+
+    &_title{
+        margin: 0;
+        background-color: $lightenedSecondaryColor;
+        padding: 0.8rem 0;
+        margin-bottom: 1rem;
+        &:hover{
+            cursor: pointer;
+        }
+    }
+
+    &_price{
+        margin: 0;
+    }
+
+    &_description{
+        padding: 1rem 1.5rem;
+        margin: 0;
+    }
+
+    &_button{
+        background-color: $primaryColor;
+        padding: 1rem 0;
+        color: $white;
+        transition: all 200ms ease-in-out;
+        &:hover{
+            cursor: pointer;
+            opacity: 0.8;
+        }
+    }
+}

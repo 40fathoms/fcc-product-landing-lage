@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap" rel="stylesheet">  
+    <link rel="stylesheet" href="dist/style.css">
+    <title>Product Landing Page</title>
+</head>
+
+<body class="body">
+    
+    <header id="header" class="header">
+
+        <nav id="nav-bar" class="flex flex-jc-sb flex-ai-c">
+
+            <a href="#" class="home">
+                <img src='../images/logo.png' alt="logo" id="header-img">
+            </a>
+
+            <a href="#" class="header_menu hide-for-desktop">
+                <span></span><span></span><span></span>
+            </a> 
+
+            <div class="header_links hide-for-mobile">
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#products" class="nav-link">Pricing</a>
+                <a href="#footer" class="nav-link">Contact Us</a>
+            </div>
+
+            <button class="button_login hide-for-mobile">Login</button>
+ 
+        </nav>
+    </header>
+
+    <div id="page-mask-menu"></div>
+    <div class="header_links_toggle hide-for-desktop">
+        <a href="#features" class="toggle_link_1">Features</a>
+        <a href="#products" class="toggle_link_2">Pricing</a>
+        <a href="#footer" class="toggle_link_3">Contact Us</a>
+        <a href="#" class="button_login_mobile">Login</a>
+    </div>
+
+    <div id="page-mask"></div>
+    <section class="login">
+        <i class="fas fa-times"></i>
+        <form action="" id="form">
+            <label for="email-login">Email</label> <br>
+            <input type="email" id="email-login" placeholder="Enter your email address" name="email-login" required>
+            <br>
+
+            <label for="password-login">Password</label> <br>
+            <input type="password" id="password-login" name="password-login" required>
+            <br>
+
+            <input type="submit" id="submit" value="Login">
+            <br>
+
+            <span class="sign-up-page">Don't have an account? Sign-Up!</span>
+        </form>
+    </section>
+
+    <section class="sign-up">
+        <i class="fas fa-times"></i>
+        <i class="fas fa-arrow-left"></i>
+        <form action="" id="form-sign-up">
+
+            <label for="email-sign-up">Email</label>
+            <br>
+            <input type="email" id="email-sign-up" placeholder="Enter your email address" name="email-sign-up" onchange="check()" required>
+            <br>
+
+            <label for="email-sign-up-repeat">Repeat your email</label> 
+            <br> 
+            <input type="email" id="email-sign-up-repeat" placeholder="Repeat your email address" name="email-sign-up" onchange="check()" required>
+            <br> 
+
+            <label for="password-sign-up">Password</label>
+            <br>
+            <input type="password" id="password-sign-up" name="password-sign-up" required>
+            <br>
+
+            <input type="submit" id="submit-sign-up" value="Submit">
+            <br> 
+            
+            <span id="warning-message"></span> <br>
+        </form>
+    </section>
+
+    <section id="content">
+        <div id="hero" class="hero">
+            <div class="hero_content">
+                <div class="hero_text">
+                    <h2>High performance notebooks</h2>
+                    <p>Experience the freedom to work and create projects without limits. Compact and powerful, our notebooks bring the cutting edge performance you need to work, create content or play, anywhere.</p>
+                </div>
+                <button class="hero_button_login">Order Now!</button>
+            </div>
+
+        </div>
+
+        <div id="features" class="flex flex-ai-c flex-jc-sb"> 
+                
+            <div class="item1">
+                <i class="fas fa-microchip fa-2x" id="image1"></i>
+                <div id="image1text">
+                    <h2>High-end performance</h2>
+                    <p>The 12th gen processors and the provided integrated video cards offer faster video and images edition. Count on more than 10 hours of battery life so you can work from anywhere.</p>
+                </div>
+            </div>
+            <div class="item2">
+                <i class="fas fa-truck fa-2x" id="image2"></i>
+                <div id="image2text">
+                    <h2>Efficient Shipping</h2>
+                    <p>Items are shipped with a tracking number. Our post services reach most countries within 10 tp 30 days. If you don't get your goods after this time period, please contact us, and we'll investigate your problem.</p>
+                </div>
+            </div>
+            <div class="item3">
+                <i class="fas fa-box-open fa-2x" id="image3"></i>
+                <div id="image3text">
+                    <h2>Product Warranty</h2>
+                    <p>Our products have a one year warranty. The warranty is not extended to products physically damaged or not under normal conditions as a result of misuse on the user's part.</p>
+                </div> 
+            </div>            
+        </div>
+        
+        <div id="products" class="products">
+            
+            <div class="products_item">
+                <div class="products_image" style="background-image: url('https://images.unsplash.com/photo-1496181133206-80ce9b88a853?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1171&q=80')"></div>
+                <div class="products_text">
+                    <h2 class="products_title">Nano XS</h2>
+                    <h3 class="products_price">$2000</h3>
+                    <p class="products_description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, rerum!</p>
+                </div>
+                <div class="products_button">Buy</div>
+            </div>
+
+            <div class="products_item">
+                <div class="products_image" style="background-image: url('https://images.unsplash.com/photo-1559163499-413811fb2344?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80')"></div>
+                <div class="products_text">
+                    <h2 class="products_title">Nano CSX-20</h2>
+                    <h3 class="products_price">$1600</h3>
+                    <p class="products_description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, rerum!</p>
+                </div>
+                <div class="products_button">Buy</div>
+            </div>
+
+            <div class="products_item">
+                <div class="products_image" style="background-image: url('https://images.unsplash.com/photo-1484788984921-03950022c9ef?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1532&q=80')"></div>
+                <div class="products_text">
+                    <h2 class="products_title">Nano BX-15</h2>
+                    <h3 class="products_price">$1200</h3>
+                    <p class="products_description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, rerum!</p>
+                </div>
+                <div class="products_button">Buy</div>
+            </div>
+
+            <div class="products_item">
+                <div class="products_image" style="background-image: url('https://images.unsplash.com/photo-1504707748692-419802cf939d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1147&q=80')"></div>
+                <div class="products_text">
+                    <h2 class="products_title">Nano BX-14</h2>
+                    <h3 class="products_price">$950</h3>
+                    <p class="products_description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, rerum!</p>
+                </div>
+                <div class="products_button">Buy</div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer" class="footer">
+
+        <div class="footer_social">
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter fa-2x"></i></a>
+            <a href="#" aria-label="Linkedin"><i class="fab fa-linkedin fa-2x"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram fa-2x"></i></a>
+        </div>
+        <div class="footer_links">
+            <a href="#">Privacy</a>
+            <a href="#">Terms</a>
+            <a href="#">Work With Us</a>
+        </div>
+        <div class="footer_copyright">&copyCopyright 2021, Nano Notebooks</div>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/7068955d05.js"></script>
+    <script src="app/js/script.js"></script>
+</body>
+</html>
